@@ -14,99 +14,163 @@
     <meta property="og:image:height" content="400" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Jeiel Lima Miranda</title>
-</head>
-  <style>
-    .footer {
+    <style>
+        body {
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 40rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-button {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border: 1px solid #007bff;
+            border-radius: 0.5rem;
+            background-color: transparent;
+            color: #007bff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .tab-button.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .footer {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
         }
-  </style>
-<script>
-function redirecionar() {
-        setTimeout(function() {
-            window.location.href = "https://about.me/jeielmiranda";
-        }, 15000);
-    }
-    window.onload = redirecionar;
-</script>
+    </style>
+</head>
 
-  
-<body class="bg-light">
-
-    <div class="container text-center py-5">
-    <div class="bio-info mb-4">
-        <img src="jeiel.png" alt="Jeiel Lima Miranda" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
-        <div class="nome mb-3 d-inline-block">
-            <h2 class="d-inline">Jeiel Lima Miranda</h2>
-            <img src="https://cdn-icons-png.flaticon.com/128/7641/7641727.png" alt="Selo verificado" class="img-fluid ml-2" style="width: 30px;">
+<body>
+    <div class="card">
+        <div class="bio-info text-center mb-4">
+            <img src="jeiel.png" alt="Jeiel Lima Miranda" class="img-fluid rounded-circle mb-3" style="width: 9.375rem; height: 9.375rem; object-fit: cover;">
+            <div class="nome mb-3 d-inline-block">
+                <h2 class="d-inline">Jeiel Lima Miranda</h2>
+                <img src="https://cdn-icons-png.flaticon.com/128/7641/7641727.png" alt="Selo verificado" class="img-fluid ml-2" style="width: 1.875rem;">
+            </div>
+            <p class="descricao">O cristão, segue os princípios deixado por Jesus Cristo. <br>O religioso, segue os princípios deixados por uma religião específica.</p>
         </div>
-        <p class="descricao">O cristão, segue os princípios deixado por Jesus Cristo. <br>O religioso, segue os princípios deixados por uma religião específica.</p>
+
+        <div class="tabs mb-4 text-center">
+            <button class="tab-button active" data-tab="projetos">Projetos</button>
+            <button class="tab-button" data-tab="redes-sociais">Redes Sociais</button>
+            <button class="tab-button" data-tab="busca-inteligente">Busca Inteligente</button>
+            <button class="tab-button" data-tab="qualificacao">Qualificação</button>
+        </div>
+
+        <div class="tab-content active" id="projetos">
+            <a href="https://lofi-square.vercel.app/" target="_blank" class="btn btn-outline-primary mb-2 w-100">
+                <i class="fas fa-coffee"></i> LoFi Square
+            </a>
+            <a href="https://quiz-jeiel.vercel.app/" target="_blank" class="btn btn-outline-primary mb-2 w-100">
+                <i class="fas fa-tachometer-alt"></i> Quiz Bíblico
+            </a>
+            <a href="https://correio-rastrear.vercel.app/" target="_blank" class="btn btn-outline-primary mb-2 w-100">
+                <i class="fas fa-search"></i> Rastrear Encomenda
+            </a>
+            <a href="https://jetrom17.github.io/cnpj-jeiel/" target="_blank" class="btn btn-outline-primary mb-2 w-100">
+                <i class="fas fa-briefcase"></i> Consultar CNPJ
+            </a>
+            <a href="https://my-pix.vercel.app/" target="_blank" class="btn btn-outline-primary mb-2 w-100">
+                <i class="fab fa-pix"></i> My PIX
+            </a>
+            <a href="https://concursa-ai.pages.dev/" target="_blank" class="btn btn-outline-primary mb-2 w-100">
+                <i class="fas fa-sharp-duotone fa-solid fa-book"></i> Concursa Aí
+            </a>
+        </div>
+
+        <div class="tab-content" id="redes-sociais">
+            <a href="https://github.com/Jetrom17" target="_blank" class="btn btn-outline-dark mb-2 w-100">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://jeiel-blog.vercel.app/" target="_blank" class="btn btn-outline-dark mb-2 w-100">
+                <i class="fas fa-newspaper"></i> Artigos
+            </a>
+            <a href="https://t.me/ZorinTrix" target="_blank" class="btn btn-outline-dark mb-2 w-100">
+                <i class="fab fa-telegram-plane"></i> Telegram
+            </a>
+            <a href="https://discord.com/invite/g7wz8z8N" target="_blank" class="btn btn-outline-dark mb-2 w-100">
+                <i class="fab fa-discord"></i> Discord
+            </a>
+            <a href="https://www.linkedin.com/in/jeiel-lima-miranda-259738232/" target="_blank" class="btn btn-outline-dark mb-2 w-100">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+
+        <div class="tab-content" id="busca-inteligente">
+            <a href='https://grok.com/share/bGVnYWN5_a07371bd-2d4d-4cde-9a44-0551b721e401' target="_blank" class="btn btn-outline-info mb-2 w-100">
+                <i class="fas fa-robot"></i> Grok responde quem sou eu.
+            </a>
+            <a href='https://www.google.com/search?q="Jeiel+Lima+Miranda"' target="_blank" class="btn btn-outline-info mb-2 w-100">
+                <i class="fas fa-search"></i> Quem é Jeiel no Google?
+            </a>
+        </div>
+
+        <div class="tab-content" id="qualificacao">
+            <a href='https://jeiel-lima-miranda.vercel.app/' target="_blank" class="btn btn-outline-success mb-2 w-100">
+                <i class="fas fa-solid fa-id-card"></i> Currículo
+            </a>
+        </div>
     </div>
 
-    <div class="links">
-        <p class="font-weight-bold">Projetos</p>
-        <a href="https://lofi-square.vercel.app/" target="_blank" class="btn btn-outline-primary mb-2" style="border-color: #007bff; color: #007bff;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#007bff';">
-            <i class="fas fa-coffee"></i> LoFi Square
-        </a>
-        <a href="https://quiz-jeiel.vercel.app/" target="_blank" class="btn btn-outline-primary mb-2" style="border-color: #007bff; color: #007bff;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#007bff';">
-            <i class="fas fa-tachometer-alt"></i> Quiz Bíblico
-        </a>
-        <a href="https://correio-rastrear.vercel.app/" target="_blank" class="btn btn-outline-primary mb-2" style="border-color: #007bff; color: #007bff;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#007bff';">
-            <i class="fas fa-search"></i> Rastrear Encomenda
-        </a>
-        <a href="https://jetrom17.github.io/cnpj-jeiel/" target="_blank" class="btn btn-outline-primary mb-2" style="border-color: #007bff; color: #007bff;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#007bff';">
-            <i class="fas fa-briefcase"></i> Consultar CNPJ
-        </a>
-        <a href="https://my-pix.vercel.app/" target="_blank" class="btn btn-outline-primary mb-2" style="border-color: #007bff; color: #007bff;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#007bff';">
-            <i class="fab fa-pix"></i> My PIX
-        </a>
-        <a href="https://concursa-ai.pages.dev/" target="_blank" class="btn btn-outline-primary mb-2" style="border-color: #007bff; color: #007bff;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#007bff';">
-            <i class="fas fa-sharp-duotone fa-solid fa-book"></i> Concursa Aí
-        </a>
-        
-        <p class="font-weight-bold" style="color: #6c757d;">Redes Sociais</p>
-        <a href="https://github.com/Jetrom17" target="_blank" class="btn btn-outline-dark mb-2" style="border-color: #343a40; color: #343a40;" onmouseover="this.style.backgroundColor='#343a40'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#343a40';">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://jeiel-blog.vercel.app/" target="_blank" class="btn btn-outline-dark mb-2" style="border-color: #343a40; color: #343a40;" onmouseover="this.style.backgroundColor='#343a40'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#343a40';">
-            <i class="fas fa-newspaper"></i> Artigos
-        </a>
-        <a href="https://t.me/ZorinTrix" target="_blank" class="btn btn-outline-dark mb-2" style="border-color: #343a40; color: #343a40;" onmouseover="this.style.backgroundColor='#343a40'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#343a40';">
-            <i class="fab fa-telegram-plane"></i> Telegram
-        </a>
-        <a href="https://discord.com/invite/g7wz8z8N" target="_blank" class="btn btn-outline-dark mb-2" style="border-color: #343a40; color: #343a40;" onmouseover="this.style.backgroundColor='#343a40'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#343a40';">
-            <i class="fab fa-discord"></i> Discord
-        </a>
-        <a href="https://www.linkedin.com/in/jeiel-lima-miranda-259738232/" target="_blank" class="btn btn-outline-dark mb-2" style="border-color: #343a40; color: #343a40;" onmouseover="this.style.backgroundColor='#343a40'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#343a40';">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        
-        <p class="font-weight-bold" style="color: #17a2b8;">Busca Inteligente</p>
-        <a href='https://chatgpt.com/share/66f6a83e-1d78-8007-9083-44a589b8fd67' target="_blank" class="btn btn-outline-info mb-2" style="border-color: #17a2b8; color: #17a2b8;" onmouseover="this.style.backgroundColor='#17a2b8'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#17a2b8';">
-            <i class="fas fa-robot"></i> ChatGPT responde quem sou eu.
-        </a>
-        <a href='https://www.google.com/search?q="Jeiel+Lima+Miranda"' target="_blank" class="btn btn-outline-info mb-2" style="border-color: #17a2b8; color: #17a2b8;" onmouseover="this.style.backgroundColor='#17a2b8'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#17a2b8';">
-            <i class="fas fa-search"></i> Quem é Jeiel no Google?
-        </a>
-        
-        <p class="font-weight-bold" style="color: #28a745;">Qualificação</p>
-        <a href='https://jeiel-lima-miranda.vercel.app/' target="_blank" class="btn btn-outline-success mb-2" style="border-color: #28a745; color: #28a745;" onmouseover="this.style.backgroundColor='#28a745'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='#28a745';">
-            <i class="fas fa-solid fa-id-card"></i> Currículo
-        </a>
-    </div>
-</div>
-
-
-    <footer class="footer mt-auto py-3 bg-dark text-white text-center">
+    <footer class="footer">
         <div class="container">
             Jeiel@duck.com
         </div>
     </footer>
 
-<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8e14c059a91c4061b2c32fc1230188e9"}'></script><!-- Cloudflare Pages Analytics --></body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
 
 </html>
